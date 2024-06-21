@@ -5,8 +5,6 @@ resource "random_string" "this" {
 }
 
 module "blah" {
-  count           = var.recurse == false ? 0 : 1
-  source          = "git::https://github.com/pdwerryhouse/terraform-random-test.git"
+  source          = "git::https://github.com/pdwerryhouse/terraform-random-test2.git"
   length          = var.length
-  recurse         = false
 }
